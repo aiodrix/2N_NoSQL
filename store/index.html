@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products and Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .item img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+        .item-info {
+            padding: 15px;
+        }
+        .title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #e44d26;
+            margin-bottom: 10px;
+        }
+        .description {
+            color: #333;
+            line-height: 1.4;
+            font-size: 0.9em;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+            }
+            .items-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        a {
+            color: #e44d26;
+            line-height: 1.4;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items-grid">
+            <div class="item">
+                <img src="ai.jpg" alt="Product 1">
+                <div class="item-info">
+                    <div class="title">Content Creation With AI</div>
+                    <div class="price">$1.00</div>
+                    <div class="description">I can create your text, image, or music for just $1 per file.</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="web.jpg" alt="Product 2">
+                <div class="item-info">
+                    <div class="title">Website freelance</div>
+                    <div class="price">$5.00</div>
+                    <div class="description">I can develop your website using PHP, HTML, CSS, JavaScript, MySQL, and other tools for $5 per hour.</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="code.jpg" alt="Product 3">
+                <div class="item-info">
+                    <div class="title">Full code</div>
+                    <div class="price">$20.00</div>
+                    <div class="description">Get the full version of the code, support and updates.
+</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="monkey.jpg" alt="Product 4">
+                <div class="item-info">
+                    <div class="title">Freestyle programming book (pdf)</div>
+                    <div class="price">$10.00</div>
+                    <div class="description">The Manifesto of satirical coding with creativity.</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="band.jpg" alt="Product 4">
+                <div class="item-info">
+                    <div class="title">Space Lovervoid (AI band)</div>
+                    <div class="price"><a href='https://mega.nz/file/QyNljAya#Ee3hS46MWCsB7Fv8fo0F9vrrD1msUXlDgc6BHy4r6N8' target='_blank'>Download</a></div>
+                    <div class="description">Download the full album and make a donation if you like it. <a href='https://www.mediafire.com/file/uf0hv90882fzg79/Super+Lovervoid+-+Toward+Everything.zip/file' target='_blank'>alternative download</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

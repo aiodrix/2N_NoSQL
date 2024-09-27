@@ -127,15 +127,11 @@
             <label for="category">Category (optional)</label>
 
             <select id="category" name="category">
-                <option value="random">Others</option>
-                <option value="adult_solo">Adult > Solo (one person)</option>
-                <option value="adult_couple">Adult > Couple</option>
-                <option value="adult_drawing">Adult > Drawing, Hentai & 3D</option>
-                <option value="adult_gay">Adult > Gay and transvestite</option>
-                <option value="adult_others">Adult > Others</option>
+                <option value="random">Select category</option>
+                <option value="adult">Adult</option>
+                <option value="music">Music</option>              
                 <option value="memes_eng">Memes</option>
-                <option value="fun_engt">Humor and Funny</option>
-                <option value="art">Art and Wallpapers</option>
+                <option value="art">Art</option>
                 <option value="opensource">Open-source and codes</option>
                 <option value="games_and_apps">Games & Apps</option>
                 <option value="news_eng">News</option>
@@ -143,6 +139,7 @@
                 <option value="telegram_eng">Telegram Groups</option>
                 <option value="freelancer">Freelancer and services</option>
                 <option value="sites">Websites and blogs</option>
+                <option value="random">Others</option>
             </select>
 
             <label for="description">Subcategory (optional)</label>

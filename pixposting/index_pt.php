@@ -261,10 +261,8 @@
 
             <select id="category" name="category">
                 <option value="random">Selecionar categoria</option>
-                <option value="adult_solo">Adulto > Solo (uma pessoa)</option>
-                <option value="adult_couple">Adulto > Casal</option>
-                <option value="adult_drawing">Adulto > Desenho, Hentai & 3D</option>
-                <option value="adult_gay">Adulto > Gay e travesti</option>
+                <option value="adult">Adulto</option>
+                <option value="music">Música</option>              
                 <option value="adult_others">Adulto > Outros</option>
                 <option value="memes_pt">Memes</option>
                 <option value="fun_pt">Humor e Engraçado</option>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="screens/logo.jpg" type="image/jpeg">
+    <title>Pages</title>
+    <style>
+        :root {
+            --bg-color: #f4f4f4;
+            --container-bg: #fff;
+            --text-color: #333;
+            --desc-color: #666;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: var(--container-bg);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+        }
+        
+        .description-list {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .description-item {
+            display: grid;
+            grid-template-columns: 30% 1fr;
+            gap: 5%;
+        }
+        
+        .description-item b {
+            color: var(--text-color);
+        }
+        
+        .description-item p {
+            color: var(--desc-color);
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="description-list">
+            <div class="description-item">
+                <b><a href="index.php">Home</a></b>
+                <p>The main page of our website.</p>
+            </div>
+            <div class="description-item">
+                <b><a href="chat/index.php">Chat</a></b>
+                <p>Choose a room and chat with your friends.</p>
+            </div>
+            <div class="description-item">
+                <b><a href="others/upload/index.php">Upload</a></b>
+                <p>Upload a zip file, extract it, and find its content without database.</p>
+            </div>
+            <div class="description-item">
+                <b><a href="others/upload_simple/index.php">Upload simple</a></b>
+                <p>Upload a file</p>
+            </div>
+            <div class="description-item">
+                <b><a href="links/index.php">Links</a></b>
+                <p>Share and search links without database</p>
+            </div>
+            <div class="description-item">
+                <b><a href="others/design_skecth/index.php">design_skecth</a></b>
+                <p>Generate simple image patterns and glitch them.</p>
+            </div>
+            <div class="description-item">
+                <b><a href="others/simple_gallery/index.php">simple_gallery</a></b>
+                <p>Upload a zip file with pictures and create a thumbnail for them.</p>
+            </div>
+            <div class="description-item">
+                <b><a href="others/pixposting/index.php">Pixposting</a></b>
+                <p>Share a link in a directory.</p>
+            </div>
+            <div class="description-item">
+                <b><a href="others/sql">sql</a></b>
+                <p>File count and the percentage of a user's participation</p>
+            </div>
+            <div class="description-item">
+                <b><a href="others/cfis">CFIS</a></b>
+                <p>MySQL tools for store file hash</p>
+            </div>
+            <div class="description-item">
+                <b><a href="others/paste/index.php">Paste</a></b>
+                <p>Simple paste tool.</p>
+            </div>
+            <div class="description-item">
+                <b><a href="others/fragments/convert.php">fragments</a></b>
+                <p>Convert a file to chunks in base64.</p>
+            </div>
+            <div class="description-item">
+                <b><a href="others/html_gallery">html_gallery</a></b>
+                <p>List the images in the directories and generate HTML pages.</p>
+            </div>
+            <div class="description-item">
+                <b><a href="others/html_styles/index.html">html_styles</a></b>
+                <p>Some templates and pages in HTML as menus, effects etc.</p>
+            </div>
+            <div class="description-item">
+                <b><a href="others/store/index.html">Services</a></b>
+                <p>Information about our services and products.</p>
+            </div>
+            <div class="description-item">
+                <b><a href="about.php">About</a></b>
+                <p>Learn more about.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

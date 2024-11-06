@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .result {
+            margin-top: 10px;
+        }
+        .found {
+            color: green;
+            cursor: pointer;
+        }
+        .not-found {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h1>File Checker</h1>
+
+<div>
+    <label for="file-name">Enter file name: </label>
+    <input type="text" id="file-name">
+    <button id="check-file">Check File</button>
+</div>
+
+<div id="result" class="result"></div>
+
+<script>
+    const servers = [
+        'http://localhost/test',
+        'http://localhost/new/files',
+        'http://server3.com'
+    ];
+
+    document.getElementById('check-file').addEventListener('click', async function() {
+        const fileName = document.getElementById('file-name').value.trim();
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = '';  // Clear previous results
+
+        if (!fileName) {
+            resultDiv.innerHTML = '<p>Please enter a file name.</p>';
+            return;
+        }
+
+        for (const server of servers) {
+            const url = `${server}/${fileName}`;
+            resultDiv.innerHTML += `<p>Checking: ${url}...</p>`;
+            
+            try {
+                const response = await fetch(url, { method: 'HEAD' });
+
+                if (response.ok) {
+                    resultDiv.innerHTML += `<p class="found" data-url="${url}">Found: ${url}</p>`;
+                } else {
+                    resultDiv.innerHTML += `<p class="not-found">File not found on: ${server}</p>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML += `<p class="not-found">Error checking file on: ${server}</p>`;
+            }
+        }
+
+        // Add click listener for found URLs to open in a new tab
+        resultDiv.addEventListener('click', function(event) {
+            if (event.target.classList.contains('found')) {
+                const url = event.target.getAttribute('data-url');
+                window.open(url, '_blank');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

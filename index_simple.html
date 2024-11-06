@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../screens/logo.jpg" type="image/jpeg">
+    <title>Decentralized PHP Framework - DecenPHP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        p {
+            margin: 0 0 20px;
+            line-height: 1.4;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #e0e0e0;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 3px;
+        }
+
+        .feature {
+            text-align: justify;
+            padding: 20px;
+        }
+
+        a {
+            color: #111;
+            padding: 0px 10px 0px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>A Decentralized PHP Framework</h1>
+    <p>Our objective is to create a decentralized and distributed PHP framework for sharing files and JSON data.</p>
+
+    <ul>
+        <li>Send and receive multiple files easily</li>
+        <li>The user will receive rewards if their files are hosted on many servers</li>
+        <li>The user can share links that will be saved in JSON files and distributed.</li>
+    </ul>
+
+    <div class="feature">
+        <h2>Simple conventions</h2>
+        <p>
+            All servers store the files in the '<b>files</b>' directory (can use their <b>SHA-256 hash</b> as the filename).
+            This makes it easy to check which servers store the same files and helps avoid file repetition.
+        </p>
+
+        <p>
+            Each server displays all the files it has in '<b>files.php</b>' (a list of links), '<b>files_json.php</b>' (returns a JSON text), '<b>files_match.php</b>' (a list of links that filters the result), or '<b>files.txt</b>' (a static text file) by default. Then, '<b>search.php</b>' and related will take the list of files from each server and display only those that match the user's input as the result.
+        </p>
+
+        <p>
+            Inside the '<b>users</b>' directory there will be subdirectories named with usernames. Inside each subdirectory
+            will be stored the hashes of the files that the user owns.
+        </p>
+
+        <p>
+            The '<b>servers</b>' folder stores text files containing the address of a server or URL per file. The filename can be the server's hash.
+        </p>
+
+        <p>
+            Inside the '<b>html</b>' directory there will be several subdirectories corresponding to categories.
+            Within each category or subdirectory, HTML files will be saved in an ordered manner (such as 1.html, 2.html) making it easier for users
+            to navigate and find contents.
+        </p>
+
+        <p>
+            <b>'files.php'</b> displays all the files in 'files' directory as links. While <b>'download_links.php'</b> will download all the links from a page and save them inside the 'files' directory using SHA-256 hashes.
+        </p>
+
+        <p>
+            <b>'sender.php'</b> and <b>'sender_multiple.php'</b> provides a practical way to send files. <b>'sender_multiple_list.php'</b> will attempt to read the content of each file inside the 'servers' directory as if it were a URL and send the files from the 'files' directory. The checking script <b>files_compare.php</b> verifies which files exist in a list of servers</b>.
+        </p>
+
+        <p>
+            Although the default is for all servers to store the files within the '<b>files</b>' directory, it is also possible
+            to create a list of servers that store files in directories with custom names (and indicate the category of the files
+            stored in that directory).
+        </p>
+
+
+    </div>
+
+    <br><hr>
+    <div style="text-align: justify; padding: 20px;">
+        The objective of DECEN (<i><b>D</b>istributed <b>E</b>xtandable <b>C</b>ollaborative <b>E</b>fficient <b>N</b>etwork</i>),
+        in addition to what has already been mentioned, it is to develop in the long term a monetization system for decentralized
+        and distributed file sharing. The user can share files or JSON documents with links if they host the files elsewhere.
+    </div>
+    <br>
+    <a href="index_block.php">Upload demo</a>
+    <a href="sender.php">Send a file to multiple servers.</a>
+    <a href="json.php">JSON</a>
+    <a href="json_sender.php">JSON (multiple)</a>   
+    <a href="search_domain.php">Domain search</a>
+    <a href="https://chat.whatsapp.com/Jm83Ib8KksaGEoTsq5kQL5" target="_blank">Whatsapp</a>
+    <a href="https://t.me/decenphp" target="_blank">Telegram</a>
+    <br><br>
+
+    <br>
+    All rights reserved
+</body>
+</html>

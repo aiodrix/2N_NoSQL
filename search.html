@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .result {
+            margin-top: 10px;
+        }
+        .found {
+            color: green;
+            cursor: pointer;
+        }
+        .not-found {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h1>File Checker</h1>
+
+<div>
+    <label for="file-name">Enter file name: </label>
+    <input type="text" id="file-name">
+    <button id="check-file">Check File</button>
+</div>
+
+<div id="result" class="result"></div>
+
+
+<script>
+    // Load the server links from servers.json
+    async function loadServers() {
+        try {
+            const response = await fetch('servers.json');
+            if (!response.ok) throw new Error('Failed to load servers.json');
+            const servers = await response.json();
+            return Object.values(servers);  // Assumes servers.json contains an array or object of URLs
+        } catch (error) {
+            console.error('Error loading servers:', error);
+            return [];
+        }
+    }
+
+    document.getElementById('check-file').addEventListener('click', async function() {
+        const fileName = document.getElementById('file-name').value.trim();
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = '';  // Clear previous results
+
+        if (!fileName) {
+            resultDiv.innerHTML = '<p>Please enter a file name.</p>';
+            return;
+        }
+
+        const servers = await loadServers();
+
+        if (servers.length === 0) {
+            resultDiv.innerHTML = '<p>Failed to load servers list.</p>';
+            return;
+        }
+
+        for (const server of servers) {
+            const url = `${server}/${fileName}`;
+            resultDiv.innerHTML += `<p>Checking: ${url}...</p>`;
+
+            try {
+                const response = await fetch(url, { method: 'HEAD' });
+
+                if (response.ok) {
+                    resultDiv.innerHTML += `<p class="found" data-url="${url}">Found: ${url}</p>`;
+                } else {
+                    resultDiv.innerHTML += `<p class="not-found">File not found on: ${server}</p>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML += `<p class="not-found">Error checking file on: ${server}</p>`;
+            }
+        }
+
+        // Add click listener for found URLs to open in a new tab
+        resultDiv.addEventListener('click', function(event) {
+            if (event.target.classList.contains('found')) {
+                const url = event.target.getAttribute('data-url');
+                window.open(url, '_blank');
+            }
+        });
+    });
+</script>

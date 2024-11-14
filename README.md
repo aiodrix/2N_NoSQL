@@ -1,13 +1,42 @@
-DecenPHPv1.2.3.2
+DecenPHP 1.4
+............
 
-Our project aims to build simple distributed and decentralized systems, as well as to create static pages..
+DecenPHP offers an easy way to search for files hosted on websites and HTTP servers. This can be done either through a MySQL database (which stores only the links and URLs) or by accessing the websites directly to retrieve their file lists (using PHP and without a database).
 
-Main features: Each server displays all the files it hosts in files.php (showing a list of links) or files_json.php (showing a JSON text). This enables decentralized searching by checking if the user input matches the name of a file hosted on a server using search.php or search_json.php.
+Other features include login, registration, statistics on the files that have received the most likes, file promotion, etc.
 
-The receiver.php page can receive files from any user via a POST request. The file will be saved in the 'files' directory and renamed with the file's SHA-256 hash (plus the original extension). To send a file to a server, the user can use sender.php, sender_multiple.php or sender_multiple_list.php.
+Users can manually enter links or provide a URL containing a list of links.
 
-If the user wants to download all files from a server, they just need to use download_links.php and insert the desired URL using GET (for example, download_links.php?url=https://testsitename.com/files.php).
+Additionally, it has various tools that do not require a database, such as temporary chat, etc.
 
-Within the 'html' directory there will be subdirectories categories with files organized inside (such as '1.html', '2.html'). This allows the user to find a category even if the server site is completely static. The html_creator_2.php tool assists in creating static pages and categories.php show all categories.
+License Terms
+..............
 
----------------------
+By using our program or any part of it, you agree to the terms of use.
+
+DecenPHP's license permits free editing, distribution, and commercial use of the software, with specific conditions outlined below. This license is intended to provide flexibility for individuals, small organizations, and businesses with fewer than 10 employees.
+
+1. Personal and Small Business Use:
+
+  Individuals and companies with 10 or fewer employees are permitted to use, modify, distribute, and profit from the software. This includes the right to freely edit the source code, redistribute modified versions, and generate revenue from the use of the software. For example, websites that share projects and profit from ad views or other monetization methods are permitted to do so under this license.
+
+2. Large Organizations: 
+  
+  Companies or institutions with more than 10 employees must obtain a separate commercial license. While they retain the right to distribute and profit from the software, they are prohibited from making any modifications to the code or any part of the software. This ensures that the core functionality and integrity of the software are preserved in larger, for-profit organizations.
+
+3. Restrictions: 
+
+  Modifications to the source code or redistribution of altered versions of the software are not permitted for organizations with more than 10 employees unless a commercial license has been obtained. The software must not be used in a manner that infringes upon the intellectual property rights of DecenPHP.
+
+4. Additional Benefits for Commercial License Holders:
+
+  Companies that acquire a commercial license gain access to additional benefits, including personalized support, customization options, and the right to display their logo (as a sponsor) within the DecenPHP project. Other commercial perks may include advertising opportunities within the project.
+
+5. Liability Disclaimer: 
+
+  DecenPHP is not responsible for any faults, errors, or misuse of the software by third parties. By using the software, users acknowledge that they are doing so at their own risk. We do not guarantee the functionality, security, or suitability of the software for any specific purpose.
+
+---
+
+In summary, any company or institution with more than ten employees must obtain a license, even if they use our software indirectly, only a part of it, a modification made by another company or regular user, or any fork that originated from our work.
+

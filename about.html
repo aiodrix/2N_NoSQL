@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Remote PHP Programmer</title>
+    <meta name="description" content="Arthur Sacramento - Remote PHP Developer specializing in Laravel, Vue.js, and AI integration">
+    <title>Arthur Sacramento - Remote PHP Developer</title>
     <style>
-        /* Basic Reset */
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -14,122 +14,209 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            padding: 20px;
+            color: #2c3e50;
+            background-color: #f8f9fa;
         }
 
-        header {
-            text-align: left;
-            margin-bottom: 40px;
-        }
-
+        /* Typography */
         h1 {
-            font-size: 2rem;
-            color: #333;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
-        a {
-            text-decoration: none;
-            color: #333;
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
         }
 
-        a: hover {
-            text-decoration: none;
-            color: #999;
+        p {
+            margin-bottom: 1.5rem;
+            color: #4a5568;
         }
 
-        main {
-            max-width: 800px;
+        /* Layout */
+        .container {
+            max-width: 1000px;
             margin: 0 auto;
-            text-align: left;
+            padding: 0 1.5rem;
         }
 
-        .about p {
-            font-size: 1.1rem;
-            margin: 20px 0;
-            text-align: justify;
+        /* Header */
+        header {
+            padding: 2rem 0;
+            background-color: white;
+            border-bottom: 1px solid #edf2f7;
         }
 
-        .checklist {
-            text-align: left;
-            margin: 40px 0;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .checklist h2 {
-            margin-bottom: 20px;
+        .nav-links {
+            display: flex;
+            gap: 2rem;
         }
 
-        ul {
-            list-style-type: none;
+        /* Links */
+        a {
+            color: #4a5568;
+            text-decoration: none;
+            transition: color 0.2s ease;
         }
 
-        ul li {
-            margin: 10px 0;
+        a:hover {
+            color: #2c3e50;
         }
 
-        input[type="checkbox"] {
-            margin-right: 10px;
+        /* Sections */
+        section {
+            margin: 4rem 0;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-item {
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            transition: transform 0.2s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Contact Links */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-link {
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            text-align: center;
+            transition: background-color 0.2s ease;
+        }
+
+        .contact-link:hover {
+            background-color: #edf2f7;
+        }
+
+        /* Status Badge */
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
-            margin-top: 40px;
-            font-size: 0.9rem;
-            color: #777;
+            padding: 2rem 0;
+            color: #718096;
+            border-top: 1px solid #edf2f7;
+            margin-top: 4rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Arthur Sacramento</h1>
-        <h2>Remote PHP Programmer</h2>
+        <div class="container">
+            <nav>
+                <h1>Arthur Sacramento</h1>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
     </header>
-    
-    <main>
-        <section class="about">
+
+    <main class="container">
+        <section id="about">
+            <h2>About Me</h2>
             <p>
-                I am a remote PHP programmer who utilizes AI to assist my work. 
-                Additionally, I work with the production of text, images, music, 
-                and any multimedia resources that can be used to build
-                a complete website from scratch or by using modern frameworks.
+                Hello! I'm a Brazilian programmer passionate about PHP development and AI integration. With expertise in Laravel, Vue.js, MySQL, and other modern technologies, I specialize in creating efficient, scalable web solutions. I'm currently developing DecenPHP, an innovative project focused on file monetization and distribution systems.
             </p>
+            <div class="status-badge">Available for Remote Work Worldwide</div>
         </section>
 
-        <section class="checklist">
-            <h2>Skills</h2>
-            <ul>
-                <li><input type="checkbox" checked> PHP Development</li>
-                <li><input type="checkbox" checked> MySQL / Database Management</li>
-                <li><input type="checkbox" checked> Frontend Development (HTML, CSS, JavaScript)</li>
-                <li><input type="checkbox" checked> Frameworks (Laravel, Vue.js)</li>
-                <li><input type="checkbox" checked> Version Control (Git)</li>
-                <li><input type="checkbox" checked> CMS Development (WordPress)</li>
-                <li><input type="checkbox" checked> Server Management (Ubuntu Linux)</li>
-                <li><input type="checkbox" checked> Project Management</li>
-                <li><input type="checkbox" checked> Social Media and Content Creator</li>
-                <li><input type="checkbox" checked> Product Quality</li>
-                <li><input type="checkbox" checked> AI Integration for Workflow</li>
-            </ul>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">PHP Development</div>
+                <div class="skill-item">MySQL Management</div>
+                <div class="skill-item">Laravel Framework</div>
+                <div class="skill-item">Vue.js</div>
+                <div class="skill-item">Git Version Control</div>
+                <div class="skill-item">WordPress Development</div>
+                <div class="skill-item">Ubuntu Server Management</div>
+                <div class="skill-item">AI Integration</div>
+                <div class="skill-item">Project Management</div>
+            </div>
         </section>
 
-        <section class="checklist">
-            <h2>Contact</h2>
-            <ul>
-                <li><a href="https://wa.me/5591986042104" target="_blank"> Whatsapp</a></li>
-                <li><a href="https://t.me/arthursacramento" target="_blank"> Telegram</a></li>
-                <li><a href="https://github.com/aiodrix" target="_blank"> Github</a></li>
-                <li><a href="https://www.linkedin.com/in/arthur-sacramento-25-80b5972bb/" target="_blank">LinkedIn</a></li>
-                <li><a href="http://2n.atwebpages.com" target="_blank">Website</a></li> 
-                <li><a href="https://2-nw.blogspot.com/" target="_blank">Blog</a></li> 
-            </ul>
+        <section id="contact">
+            <h2>Let's Connect</h2>
+            <div class="contact-grid">
+                <a href="https://wa.me/5591986042104" target="_blank" class="contact-link">WhatsApp</a>
+                <a href="https://t.me/arthursacramento" target="_blank" class="contact-link">Telegram</a>
+                <a href="https://github.com/aiodrix" target="_blank" class="contact-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/arthur-sacramento-25-80b5972bb/" target="_blank" class="contact-link">LinkedIn</a>
+                <a href="http://2n.atwebpages.com" target="_blank" class="contact-link">Website</a>
+                <a href="https://2-nw.blogspot.com/" target="_blank" class="contact-link">Blog</a>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 - Remote PHP Programmer</p>
+        <div class="container">
+            <p>&copy; 2024 Arthur Sacramento - Remote PHP Developer</p>
+        </div>
     </footer>
 </body>
 </html>
